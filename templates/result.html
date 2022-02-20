@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Heart Disease Detection </title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>result</h1>
+      <div class="nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="/heart">Heart Disease Prediction</a>
+          </li>
+          <li>
+            <a href="/liver">Liver Disease Prediction</a>
+          </li>
+          <li>
+            <a href="/parki">parkinson Disease Prediction</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="resultclass">{{resultvalue}}</div>
+    <section class="footer">
+      <p>Copy right @ Abdul Alim Shohan</p>
+      <div class="icons">
+        <a href="https://facebook.com/">Facebook</a>
+        <a href="https://twitter.com/">Twitter</a>
+        <a href="https://www.linkedin.com/">Linked In</a>
+      </div>
+    </section>
+  </body>
+</html>
