@@ -101,7 +101,7 @@ def cancer_page():
         albumin = request.form['exang']
         albumin_and_globulin_ratio = request.form['oldpeak']
 
-        liver_dataset = pd.read_csv('D:/AI-doctor/liver.csv')
+        liver_dataset = pd.read_csv('D:/AI-care/liver.csv')
         liver_dataset['Gender'] = liver_dataset['Gender'].map({'Male': 1, 'Female': 2})
         liver_dataset.dropna(inplace=True)
         X = liver_dataset.drop(columns='Dataset', axis=1)
@@ -138,7 +138,7 @@ def heart_page():
         slope = request.form['slope']
         ca = request.form['ca']
         thal = request.form['thal']
-        heart_dataset = pd.read_csv('D:/AI-doctor/heart.csv')
+        heart_dataset = pd.read_csv('D:/AI-care/heart.csv')
         X = heart_dataset.drop(columns='target', axis=1)
         Y = heart_dataset['target']
         X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.4, random_state=101)
@@ -182,7 +182,7 @@ def parki_page():
         Spread2 = request.form['Spread2']
         D2 = request.form['D2']
         PPE = request.form['PPE']
-        parkinsons_dataset = pd.read_csv('D:/AI-doctor/parkinsons.data')
+        parkinsons_dataset = pd.read_csv('D:/AI-care/parkinsons.data')
         X = parkinsons_dataset.drop(columns=['name','status'], axis=1)
         Y = parkinsons_dataset['status']
         X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.4, random_state=101)
